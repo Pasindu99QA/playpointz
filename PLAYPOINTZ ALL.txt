@@ -24,8 +24,8 @@ public class Login {
 
         driver.manage().window().maximize();
 
-        driver.findElement(By.name("username")).sendKeys("superAdmin");
-        driver.findElement(By.id("password-input")).sendKeys("admin@play#pointz@sh");
+        driver.findElement(By.name("username")).sendKeys("****");
+        driver.findElement(By.id("password-input")).sendKeys("********");
         driver.findElement((By.className("btn"))).click();
         Thread.sleep(5000);
 
@@ -37,17 +37,9 @@ public class Login {
 
 
 
-    //create Quizzes
-//        Set<String> handler = driver.getWindowHandles();
-//        Iterator<String> it = handler.iterator();
-//
-//        String parentWindowId = it.next();
-//        System.out.println("parent windwo id:"+ parentWindowId);
-//
-//        String childWindowId = it.next();
-//        System.out.println("child window id:"+ childWindowId);
-//
-//        driver.switchTo().window(childWindowId);
+
+
+       driver.switchTo().window(childWindowId);
 
         Thread.sleep(3000);
         driver.findElement(By.xpath("/html/body/play-pointz-root/play-pointz-layout/main/div/play-pointz-quizzes/div/div[3]/div/div/form/div[2]/div[1]/div/div[1]/input")).sendKeys("pasi");
@@ -199,10 +191,7 @@ public class Login {
        Select select6 = new Select(dropdown6);
        select6.selectByValue("76a9e798-bf84-4593-8b1b-b514837fb786");
 
-        //delete alert box
-       // driver.findElement(By.xpath("//*[@id=\"itemModal\"]/div/div/form/div[2]/div[4]/button")).click();
-        //Alert alert = driver.switchTo().alert();
-        //alert.accept();
+      
 Thread.sleep(1000);
        // WebElement choose1 =  driver.findElement(By.xpath("//*[@id=\"itemModal\"]/div/div/form/div[2]/div[5]/div/button"));
         //choose1.sendKeys("C:\\Users\\cey\\Desktop\\iPhone_14_Pro_Max_WLAN_Wifi_6E.jpg");
@@ -379,12 +368,6 @@ Thread.sleep(1000);
         } catch (AWTException e) {
             throw new RuntimeException(e);
         }
-
-
-
-
-
-
 
 
     }
